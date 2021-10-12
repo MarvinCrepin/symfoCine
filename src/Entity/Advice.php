@@ -24,7 +24,7 @@ class Advice
     private $user;
 
     /**
-     * @ORM\ManyToOne(targetEntity=film::class, inversedBy="advices")
+     * @ORM\ManyToOne(targetEntity=Film::class, inversedBy="advices")
      * @ORM\JoinColumn(nullable=false)
      */
     private $film;

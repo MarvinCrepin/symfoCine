@@ -24,7 +24,7 @@ class Comment
     private $author;
 
     /**
-     * @ORM\ManyToOne(targetEntity=film::class, inversedBy="comments")
+     * @ORM\ManyToOne(targetEntity=Film::class, inversedBy="comments")
      * @ORM\JoinColumn(nullable=false)
      */
     private $film;

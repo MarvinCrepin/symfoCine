@@ -24,7 +24,7 @@ class FavoriteFilm
     private $user;
 
     /**
-     * @ORM\ManyToOne(targetEntity=film::class, inversedBy="favoriteFilms")
+     * @ORM\ManyToOne(targetEntity=Film::class, inversedBy="favoriteFilms")
      * @ORM\JoinColumn(nullable=false)
      */
     private $film;
