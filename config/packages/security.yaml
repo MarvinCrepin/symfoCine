@@ -38,3 +38,6 @@ security:
          - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
          - { path: ^/admin, roles: ROLE_ADMIN }
          - { path: ^/favorites , roles: ROLE_USER}
+         - { path: ^/logout, roles: ROLE_USER}
+
+
