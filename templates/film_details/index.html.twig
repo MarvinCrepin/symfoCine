@@ -1,33 +1,25 @@
 {% extends 'base.html.twig' %}
 
-
-{% block stylesheets %}
-{% endblock %}
-
-
-{% block title %}Home{% endblock %}
+{% block title %}Hello FilmDetailsController!{% endblock %}
 
 {% block body %}
-
-{% for film in films %}
-                             <!-- Movie Card Beginning -->
-         <div class="card-view">
-                                <div class="card-header background" style="background: url({{ film.ImgField }}); background: cover;" >
+                            <!-- Movie Card Start -->
+<div class="d-flex justify-content-center">
+            <div class="card-view">
+                                <div class="card-header background justify-content-center" style="background: url({{ film.ImgField }});" >
                                     <div class="card-header-icon">
-                                        <a href="{{path('film_details', {slug: film.slug})}}">
+                                        <a href="#">
                                         </a>
                                     </div>
                                 </div>
                                 <div class="card-movie-content">
                                     <div class="card-movie-content-head">
-                                        <a href="{{path('film_details', {slug: film.slug})}}">
+                                        <a href="#">
                                             <h3 class="h4 text-center">{{ film.title }}</h3>
                                         </a>
                                    </div>
                                 </div>
                             </div>
+                            </div>
                             <!-- Movie Card End -->
-{% endfor %}
-
 {% endblock %}
-

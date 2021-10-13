@@ -14,11 +14,11 @@ class HomeController extends AbstractController
     public function index(): Response
     {
         $repository = $this->getDoctrine()->getRepository(Film::class);
-        $film = $repository->findAll();
+        $filmRepo = $repository->findAll();
 
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
-            'films' => $film,
+            'films' => $filmRepo,
         ]);
 
         
