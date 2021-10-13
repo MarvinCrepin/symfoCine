@@ -27,7 +27,7 @@ h3,
 h4,
 h5,
 p {
-    font-weight: 400;
+    font-weight: ;
 }
  
 a {
@@ -40,57 +40,23 @@ a:hover {
 }
  
 .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
+  
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+   
 }
  
-.navbar-dark {
-    padding: 15px !important;
-    background: #13191d !important;
-}
- 
-.sidebar {
-    line-height: 26px;
-    padding-top: 50px;
-}
- 
-.sidebar ul {
-    margin: 30px 0px;
-}
- 
-.sidebar .nav-link {
-    display: block;
-    text-align: center;
-}
- 
-.sidebar .nav-link i {
-    display: block;
-    text-align: center;
-}
- 
-.sidebar .nav-link.active {
-    color: #03A9F4;
-}
- 
-.movie_list {
-    margin-top: 5rem;
-    padding-left: 4rem !important;
-}
- 
+
 .card-view {
     background: #ffffff;
     box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 315px;
+    height: 100%;
+    max-width: 40vh;
     margin: 2em;
     border-radius: 10px;
     display: inline-block;
@@ -99,7 +65,7 @@ a:hover {
 .card-header {
     padding: 0;
     margin: 0;
-    height: 367px;
+    height: 350px;
     width: 100%;
     display: block;
     border-top-left-radius: 10px;
@@ -180,7 +146,8 @@ a:hover {
 }
  
 .card-movie-content {
-    padding: 18px 18px 24px 18px;
+    max-height: 62px;
+    padding: 15px 15px 20px 15px;
     margin: 0;
 }
  
