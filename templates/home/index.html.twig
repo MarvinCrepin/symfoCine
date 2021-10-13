@@ -10,7 +10,7 @@
 {% block body %}
 
 {% for film in films %}
-
+                             <!-- Movie Card Beginning -->
          <div class="card-view">
                                 <div class="card-header background" style="background: url({{ film.ImgField }}); background: cover;" >
                                     <div class="card-header-icon">
@@ -23,8 +23,6 @@
                                         <a href="#">
                                             <h3 class="card-movie-title">{{ film.title }}</h3>
                                         </a>
-                                        
-                                   
                                    </div>
                                 </div>
                             </div>

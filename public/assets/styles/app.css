@@ -21,14 +21,6 @@ ul {
     list-style-type: none;
 }
  
-h1,
-h2,
-h3,
-h4,
-h5,
-p {
-    font-weight: ;
-}
  
 a {
     text-decoration: none;
@@ -72,46 +64,7 @@ a:hover {
     border-top-right-radius: 10px;
 }
  
-.avengerEndgame {
-    background: url("https://i.picsum.photos/id/343/200/300.jpg?hmac=_7ttvLezG-XONDvp0ILwQCv50ivQa_oewm7m6xV2uZA");
-    background-size: cover;
-}
- 
-.hobbsShaw {
-    background: url("img/hobbs-and-shaw.jpg");
-    background-size: cover;
-}
- 
-.Johnwick {
-    background: url("img/john-wick-3.jpg");
-    background-size: cover;
-    background-position: 100% 100%;
-}
- 
-.deadPool {
-    background: url("img/deadpool-2.jpg");
-    background-size: cover;
-}
- 
-.theLionking {
-    background: url("img/lion_king.jpg");
-    background-size: cover;
-}
- 
-.madMax {
-    background: url("img/mad_max.jpg");
-    background-size: cover;
-}
- 
-.aquaMan {
-    background: url("img/aqua_man.jpg");
-    background-size: cover;
-}
- 
-.missionImpossible {
-    background: url("img/mission_Impossible.jpg");
-    background-size: cover;
-}
+
  
 .card-header-icon {
     position: relative;
@@ -163,21 +116,8 @@ a:hover {
     display: table-cell;
 }
  
-.ratings {
-    width: 50px;
-    height: 15px;
-    background-size: contain;
-    display: table-cell;
-    text-align: right;
-    position: relative;
-    margin-top: 5px;
-    font-weight: 600;
-}
  
-.ratings span {
-    color: #2196F3;
-}
- 
+
 .card-movie-info {
     margin-top: 1em;
 }
