@@ -8,34 +8,28 @@
 {% block title %}Home{% endblock %}
 
 {% block body %}
-            <div class="card-view">
-                                <div class="card-header avengerEndgame">
+
+{% for film in films %}
+
+         <div class="card-view">
+                                <div class="card-header background" style="background: url({{ film.ImgField }}); background: cover;" >
                                     <div class="card-header-icon">
                                         <a href="#">
                                         </a>
                                     </div>
                                 </div>
-
                                 <div class="card-movie-content">
                                     <div class="card-movie-content-head">
-                                        <a href="l">
-                                            <h3 class="card-movie-title">Avengers: Endgame</h3>
+                                        <a href="#">
+                                            <h3 class="card-movie-title">{{ film.title }}</h3>
                                         </a>
-                                        <div class="ratings"><span>8.8</span>/10</div>
-                                    </div>
-                                    <div class="card-movie-info">
-                                        <div class="movie-running-time">
-                                            <label>Last update</label>
-                                            <span>Sun 8 Sept - 10:00PM</span>
-                                        </div>
-                                        <div class="movie-running-time">
-                                            <label>Running time</label>
-                                            <span>2hr 09min</span>
-                                        </div>
-                                    </div>
+                                        
+                                   
+                                   </div>
                                 </div>
                             </div>
                             <!-- Movie Card End -->
+{% endfor %}
 
 {% endblock %}
 
