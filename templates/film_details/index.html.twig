@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello FilmDetailsController!{% endblock %}
+
+{% block body %}
+<div class="card-view">
+                                <div class="card-header background" style="background: url({{ film.ImgField }}); background: cover;" >
+                                    <div class="card-header-icon">
+                                        <a href="#">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card-movie-content">
+                                    <div class="card-movie-content-head">
+                                        <a href="#">
+                                            <h3 class="card-movie-title">{{ film.title }}</h3>
+                                        </a>
+                                   </div>
+                                </div>
+                            </div>
+                            <!-- Movie Card End -->
+{% endblock %}
