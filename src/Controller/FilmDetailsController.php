@@ -13,6 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
      * @package App\Controller
  */
 
+
 class FilmDetailsController extends AbstractController
 {
     /**

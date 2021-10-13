@@ -21,7 +21,7 @@ class FilmCrudController extends AbstractCrudController
         return [
             TextField::new('title'),
             TextEditorField::new('description'),
-            TextField::new('slug'),
+            TextField::new('slug')->hideOnForm(),
             TextField::new('img_field'),
 
         ];

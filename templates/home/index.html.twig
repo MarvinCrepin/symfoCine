@@ -14,14 +14,14 @@
          <div class="card-view">
                                 <div class="card-header background" style="background: url({{ film.ImgField }}); background: cover;" >
                                     <div class="card-header-icon">
-                                        <a href="#">
+                                        <a href="{{path('film_details', {slug: film.slug})}}">
                                         </a>
                                     </div>
                                 </div>
                                 <div class="card-movie-content">
                                     <div class="card-movie-content-head">
-                                        <a href="#">
-                                            <h3 class="card-movie-title">{{ film.title }}</h3>
+                                        <a href="{{path('film_details', {slug: film.slug})}}">
+                                            <h3 class="h4 text-center">{{ film.title }}</h3>
                                         </a>
                                    </div>
                                 </div>

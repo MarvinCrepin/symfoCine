@@ -3,8 +3,10 @@
 {% block title %}Hello FilmDetailsController!{% endblock %}
 
 {% block body %}
-<div class="card-view">
-                                <div class="card-header background" style="background: url({{ film.ImgField }}); background: cover;" >
+                            <!-- Movie Card Start -->
+<div class="d-flex justify-content-center">
+            <div class="card-view">
+                                <div class="card-header background justify-content-center" style="background: url({{ film.ImgField }});" >
                                     <div class="card-header-icon">
                                         <a href="#">
                                         </a>
@@ -13,10 +15,11 @@
                                 <div class="card-movie-content">
                                     <div class="card-movie-content-head">
                                         <a href="#">
-                                            <h3 class="card-movie-title">{{ film.title }}</h3>
+                                            <h3 class="h4 text-center">{{ film.title }}</h3>
                                         </a>
                                    </div>
                                 </div>
+                            </div>
                             </div>
                             <!-- Movie Card End -->
 {% endblock %}
