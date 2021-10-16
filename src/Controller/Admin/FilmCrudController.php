@@ -22,17 +22,9 @@ class FilmCrudController extends AbstractCrudController
             TextField::new('title'),
             TextEditorField::new('description'),
             TextField::new('slug')->hideOnForm(),
-            TextField::new('img_field'),
-
+            TextField::new('img_field')->hideOnIndex(),
+            idField::new('id')->hideonForm(),
         ];
     }
     
-    /* public function deleteEntity(EntityManagerInterface $entityManager, $entityInstance): void
-    {
-        var_dump($entityInstance);
-        $entityManager->remove($entityInstance);
-        $entityManager->flush();
-        
-    }
-    */
 }

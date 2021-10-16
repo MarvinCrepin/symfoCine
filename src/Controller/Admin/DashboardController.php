@@ -9,9 +9,31 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Film;
 use App\Entity\User;
+use App\Repository\FilmRepository;
+use App\Repository\UserRepository;
 
 class DashboardController extends AbstractDashboardController
 {
+    /**
+     * @var UserRepository
+     */
+    protected UserRepository $userRepository;
+
+    /**
+     * @var UserRepository
+     */
+    protected FilmRepository $filmRepository;
+
+
+    public function __construct(
+        UserRepository $userRepository,
+        FilmRepository $helpRepository,
+    )
+    {
+        $this->userRepository = $userRepository;
+        $this->helpRepository = $helpRepository;
+    }
+
     /**
      * @Route("/admin", name="admin")
      */

@@ -15,7 +15,7 @@ class Film
 {
     /**
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
+     * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
     private $id;
@@ -54,13 +54,20 @@ class Film
      * @Gedmo\Slug(fields={"title"})
      * @ORM\Column(type="string", length=255)
      */
+    
     private $slug;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=User::class, inversedBy="films")
+     */
+    private $favorites;
 
     public function __construct()
     {
         $this->comments = new ArrayCollection();
         $this->advices = new ArrayCollection();
         $this->favoriteFilms = new ArrayCollection();
+        $this->favorites = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -197,6 +204,30 @@ class Film
     public function getSlug(): ?string
     {
         return $this->slug;
+    }
+
+    /**
+     * @return Collection|user[]
+     */
+    public function getFavorites(): Collection
+    {
+        return $this->favorites;
+    }
+
+    public function addFavorite(user $favorite): self
+    {
+        if (!$this->favorites->contains($favorite)) {
+            $this->favorites[] = $favorite;
+        }
+
+        return $this;
+    }
+
+    public function removeFavorite(user $favorite): self
+    {
+        $this->favorites->removeElement($favorite);
+
+        return $this;
     }
 
     

@@ -1,20 +1,33 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello FavoritesController!{% endblock %}
+
+{% block stylesheets %}
+{% endblock %}
+
+
+{% block title %}Home{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+{% for film in films %}
+                             <!-- Movie Card Beginning -->
+         <div class="card-view">
+                                <div class="card-header background" style="background: url({{ film.ImgField }}); background: cover;" >
+                                    <div class="card-header-icon">
+                                        <a href="{{path('film_details', {slug: film.slug})}}">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card-movie-content">
+                                    <div class="card-movie-content-head">
+                                        <a href="{{path('film_details', {slug: film.slug})}}">
+                                            <h3 class="h4 text-center">{{ film.title }} </h3>
+                                        </a>
+                                   </div>
+                                </div>
+                            </div>
+                        </a>
+                            <!-- Movie Card End -->
+{% endfor %}
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/Users/sayn/Documents/Symfony/SymfoCine/src/Controller/FavoritesController.php'|file_link(0) }}">src/Controller/FavoritesController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/Users/sayn/Documents/Symfony/SymfoCine/templates/favorites/index.html.twig'|file_link(0) }}">templates/favorites/index.html.twig</a></code></li>
-    </ul>
-</div>
 {% endblock %}
