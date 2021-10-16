@@ -3,8 +3,11 @@
 namespace App\Repository;
 
 use App\Entity\FavoriteFilm;
+use App\Entity\Film;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\ORM\Query\Parameter;
 
 /**
  * @method FavoriteFilm|null find($id, $lockMode = null, $lockVersion = null)
@@ -22,19 +25,7 @@ class FavoriteFilmRepository extends ServiceEntityRepository
     // /**
     //  * @return FavoriteFilm[] Returns an array of FavoriteFilm objects
     //  */
-    /*
-    public function findByExampleField($value)
-    {
-        return $this->createQueryBuilder('f')
-            ->andWhere('f.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('f.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
-    }
-    */
+    
 
     /*
     public function findOneBySomeField($value): ?FavoriteFilm

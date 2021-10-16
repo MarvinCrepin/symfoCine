@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello FilmDetailsController!{% endblock %}
+{% block title %} {{film.title}}{% endblock %}
 
 {% block body %}
                             <!-- Movie Card Start -->
@@ -22,4 +22,27 @@
                             </div>
                             </div>
                             <!-- Movie Card End -->
+                            <!-- Description Start -->
+                            <div class="d-flex justify-content-center">
+                            <p class=""> {{film.description|raw}} </p>
+                            </div>
+                            <!-- Description End -->
+                            {% if is_granted("ROLE_USER") %}
+                            {% set isFavorite = false %}
+							{% for favoris in annonce.favoris %}
+								{% if favoris.id == app.user.id %}
+                                    {% set isFavorite = true %}
+								{% endif %}    
+							{% endfor %}
+                            {% if isFavorite %}
+								<a href="{{ path('annonces_ajout_favoris', {id: annonce.id}) }}"><i class="fas fa-heart"></i></a>
+                            {% else %}
+								<a href="{{ path('annonces_ajout_favoris', {id: annonce.id}) }}"><i class="far fa-heart"></i></a>
+                            {% endif %}
+
+						{% else %}
+							<i class="far fa-heart"></i>
+						{% endif %}
+                            
+
 {% endblock %}
