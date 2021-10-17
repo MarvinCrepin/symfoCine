@@ -39,5 +39,6 @@ security:
          - { path: ^/admin, roles: ROLE_ADMIN }
          - { path: ^/favorites , roles: ROLE_USER}
          - { path: ^/logout, roles: ROLE_USER}
+         - { path: ^/comment, roles: ROLE_USER}
 
 
