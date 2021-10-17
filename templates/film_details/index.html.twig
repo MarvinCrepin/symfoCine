@@ -47,12 +47,14 @@
             <div class="card p-3 pb-3">
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="user d-flex flex-row align-items-center"> 
-                    <span><p class="font-weight-bold text-primary">{{comm.nickname}}</p> <p class="font-weight-bold">{{comm.title}}</p></span> </div> 
+                    <span><p class="font-weight-bold text-primary h3">{{comm.nickname}}</p> <p class="font-weight-bold">{{comm.title}}</p></span> </div> 
                 </div>
-              <p>{{comm.content}}</p>
-                        {% endfor %}
-                        
+              <p class="h6">{{comm.content}}</p>
+              <div class="pb-2">
                     </div>
+                    </div>
+                        {% endfor %}
+                                          
 	<!--	<a href="{{ path('remove_favorite', {id: film.id}) }}"><i class="far fa-heart"></i></a> -->
                             
 
