@@ -13,6 +13,7 @@ class FilmCrudController extends AbstractCrudController
     public static function getEntityFqcn(): string
     {
         return Film::class;
+        
     }
 
     
@@ -25,6 +26,7 @@ class FilmCrudController extends AbstractCrudController
             TextField::new('img_field')->hideOnIndex(),
             idField::new('id')->hideonForm(),
         ];
+        
     }
     
 }

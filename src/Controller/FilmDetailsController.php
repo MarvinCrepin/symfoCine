@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Controller;
-
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use App\Entity\Comment;
 use App\Form\CommentType;
 use App\Entity\User;
@@ -33,9 +33,8 @@ class FilmDetailsController extends AbstractController
             if(!$film){
                 throw new NotFoundHttpException('Pas de film trouvé');
             }
+        
     // Partie commentaire 
-
-    
             
         return $this->render('film_details/index.html.twig', compact('film'));
     }
@@ -46,6 +45,7 @@ class FilmDetailsController extends AbstractController
     /**
      * @Route("/details/{slug}/comment", name="app_comment")
      */
+    
     public function comment($slug, Request $request): Response
     {
         $filmComment = $this->getDoctrine()
@@ -62,10 +62,10 @@ class FilmDetailsController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             
             $commentaire->setFilm($filmComment)
-                ->setAuthor($user);
+                        ->setAuthor($user);
 
             $em = $this->getDoctrine()
-                    ->getManager();
+                         ->getManager();
 
             $em->persist($commentaire);
 
@@ -75,8 +75,8 @@ class FilmDetailsController extends AbstractController
         return $this->render('film_details/comment.html.twig', [
             'user' => $user,
             'form' => $form->createView(),
+            $this->redirectToRoute('app_home'),
         ]);
-        return $this->redirectToRoute('app_home');
 
     }
 }
