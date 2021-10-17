@@ -18,7 +18,7 @@ class Advice
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity=user::class, inversedBy="advices")
+     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="advices")
      * @ORM\JoinColumn(nullable=false)
      */
     private $user;
