@@ -31,6 +31,15 @@
         </div>
         </div>
                             </div>
+                            <div>
+                            <p class="text-center"><a href="{{ film.slug }}/comment">Laisser un commentaire!</a></p>
+
+                        {% for comm in film.getComments %}
+                          
+                            <p>{{ comm.content }}</p>
+                        {% endfor %}
+                        
+                    </div>
 	<!--	<a href="{{ path('remove_favorite', {id: film.id}) }}"><i class="far fa-heart"></i></a> -->
                             
 
