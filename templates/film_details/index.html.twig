@@ -4,7 +4,7 @@
 
 {% block body %}
                             <!-- Movie Card Start -->
-<div class="d-flex justify-content-center">
+<div class="d-flex justify-content-center text-center">
             <div class="card-view">
                                 <div class="card-header background justify-content-center" style="background: url({{ film.ImgField }});" >
                                     <div class="card-header-icon">
@@ -19,16 +19,19 @@
                                         </a>
                                    </div>
                                 </div>
-                            </div>
-                            </div>
+                            
                             <!-- Movie Card End -->
                             <!-- Description Start -->
                             <div class="d-flex justify-content-center">
                             <p class=""> {{film.description|raw}} </p>
                             </div>
                             <!-- Description End -->
-        <a href="{{ path('add_favorite', {id: film.id}) }}"><i class="fas fa-heart"></i></a>
-		<a href="{{ path('remove_favorite', {id: film.id}) }}"><i class="far fa-heart"></i></a>
+                            <div class="text-center">
+        <a href="{{ path('add_favorite', {id: film.id}) }}">❤️</a>
+        </div>
+        </div>
+                            </div>
+	<!--	<a href="{{ path('remove_favorite', {id: film.id}) }}"><i class="far fa-heart"></i></a> -->
                             
 
 {% endblock %}
