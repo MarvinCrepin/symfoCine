@@ -60,7 +60,8 @@ class FilmDetailsController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            
+            $this->addFlash('success', 'Commentaire envoyé ! Merci !');
+
             $commentaire->setFilm($filmComment)
                         ->setAuthor($user);
 
@@ -68,7 +69,6 @@ class FilmDetailsController extends AbstractController
                          ->getManager();
 
             $em->persist($commentaire);
-
             $em->flush();
         }
         
