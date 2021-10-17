@@ -34,6 +34,18 @@ class Comment
      */
     private $content;
 
+    /**
+     * @ORM\Column(type="string", length=100)
+     */
+    private $nickname;
+
+    /**
+     * @ORM\Column(type="string", length=100)
+     */
+    private $title;
+
+    
+
     public function getId(): ?int
     {
         return $this->id;
@@ -74,4 +86,30 @@ class Comment
 
         return $this;
     }
+
+    public function getNickname(): ?string
+    {
+        return $this->nickname;
+    }
+
+    public function setNickname(string $nickname): self
+    {
+        $this->nickname = $nickname;
+
+        return $this;
+    }
+
+    public function getTitle(): ?string
+    {
+        return $this->title;
+    }
+
+    public function setTitle(string $title): self
+    {
+        $this->title = $title;
+
+        return $this;
+    }
 }
+
+   

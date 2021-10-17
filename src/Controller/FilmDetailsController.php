@@ -65,17 +65,19 @@ class FilmDetailsController extends AbstractController
                 ->setAuthor($user);
 
             $em = $this->getDoctrine()
-                ->getManager();
+                    ->getManager();
 
             $em->persist($commentaire);
 
             $em->flush();
         }
-
+        
         return $this->render('film_details/comment.html.twig', [
             'user' => $user,
             'form' => $form->createView(),
         ]);
+        return $this->redirectToRoute('app_home');
+
     }
 }
 
